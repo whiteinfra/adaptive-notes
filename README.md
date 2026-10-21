@@ -1,12 +1,23 @@
-## Лабораторна робота №10
+# Adaptive Notes
 
-## Опис
-Адаптивний застосунок для телефону та планшету з локалізацією uk/en і доступністю.
+![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white)
+![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-4285F4?style=flat-square&logo=jetpackcompose&logoColor=white)
+![i18n](https://img.shields.io/badge/i18n-uk%20%7C%20en-0057B7?style=flat-square)
 
-## Як запустити
-1. Відкрийте проєкт у Android Studio (Iguana або новіше).
-2. Дайте Gradle синхронізуватися. Якщо немає gradlew — Android Studio створить wrapper автоматично, або згенеруйте через `gradle wrapper`.
-3. Run на емуляторі (API 26+) або реальному пристрої.
+A notes app that adapts to the screen: a single-pane flow on phones and a **list-detail layout on tablets**, chosen with Material 3 **window size classes**. Strings are localized in **Ukrainian and English**, and UI elements have accessibility descriptions for screen readers.
 
-## Автор
-Білоус Владислав, група К-31, Ірпінський фаховий коледж економіки та права.
+> Lab #10 · Mobile Application Development course. Ukrainian version: [README.uk.md](README.uk.md)
+
+## Features
+
+- `calculateWindowSizeClass` picks `NotesPhoneLayout` or `NotesTabletLayout`
+- Localized resources in `values-uk` and `values-en`
+- `contentDescription` on interactive elements for TalkBack
+
+## Tech stack
+
+Kotlin · Jetpack Compose · Material 3 window size classes · Android resources localization
+
+## Run locally
+
+Open in Android Studio, let Gradle sync, run on a phone and on a tablet emulator to compare layouts.
